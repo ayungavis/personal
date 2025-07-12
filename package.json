@@ -22,6 +22,7 @@
   "keywords": [],
   "homepage": "https://github.com/ayungavis/personal",
   "dependencies": {
+    "@vercel/speed-insights": "^1.2.0",
     "clsx": "^2.1.1",
     "next": "^15.3.1",
     "next-themes": "^0.4.6",

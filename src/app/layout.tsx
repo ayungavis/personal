@@ -1,6 +1,7 @@
 // eslint-disable-next-line simple-import-sort/imports
 import '@/styles/globals.css';
 
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata, Viewport } from 'next';
 import { ThemeProvider } from 'next-themes';
 import Script from 'next/script';
@@ -59,6 +60,8 @@ const RootLayout = ({
         <ThemeProvider forcedTheme="light">
           <MainLayout>{children}</MainLayout>
         </ThemeProvider>
+
+        <SpeedInsights />
       </body>
     </html>
   );
