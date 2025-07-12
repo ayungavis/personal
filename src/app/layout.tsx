@@ -1,7 +1,9 @@
+// eslint-disable-next-line simple-import-sort/imports
 import '@/styles/globals.css';
 
 import type { Metadata, Viewport } from 'next';
 import { ThemeProvider } from 'next-themes';
+import Script from 'next/script';
 import type { CSSProperties, ReactNode } from 'react';
 
 import { MainLayout } from '@/components/layout/main-layout';
@@ -45,6 +47,14 @@ const RootLayout = ({
       }
     >
       <body>
+        {/* Umami Analytics */}
+        <Script
+          defer
+          data-website-id="0211a212-68e7-4619-aaf5-6a304214fbd2"
+          src="https://cloud.umami.is/script.js"
+          strategy="afterInteractive"
+        />
+
         {/* // TODO: Implement dark theme later */}
         <ThemeProvider forcedTheme="light">
           <MainLayout>{children}</MainLayout>
