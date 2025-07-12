@@ -1,13 +1,11 @@
 const HomePage = () => {
   return (
-    <div className="grid min-h-screen place-content-center gap-y-4">
-      <h1 className="text-4xl font-bold">Home</h1>
-      <p className="text-xl">
-        Get started by editing{' '}
-        <code className="rounded-lg bg-slate-800 px-2 py-1 font-mono">
-          src/app/page.tsx
-        </code>
-      </p>
+    <div className="flex flex-1 flex-col justify-center">
+      <h1 className="text-lg font-medium">
+        software engineer building scalable,
+        <br />
+        ai-powered, web3-enabled applications
+      </h1>
     </div>
   );
 };

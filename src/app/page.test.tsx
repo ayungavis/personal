@@ -16,17 +16,20 @@ describe('HomePage', () => {
   });
 
   it('renders the heading with the correct text', () => {
-    const heading = screen.getByRole('heading', { level: 1, name: /home/i });
+    const heading = screen.getByRole('heading', {
+      level: 1,
+      name: /software engineer/i,
+    });
     expect(heading).toBeInTheDocument();
   });
 
-  it('renders the paragraph with the correct text', () => {
-    const paragraph = screen.getByText(/get started by editing/i);
-    expect(paragraph).toBeInTheDocument();
-  });
+  // it('renders the paragraph with the correct text', () => {
+  //   const paragraph = screen.getByText(/get started by editing/i);
+  //   expect(paragraph).toBeInTheDocument();
+  // });
 
-  it('renders the code block with the correct file path', () => {
-    const codeBlock = screen.getByText(/src\/app\/page\.tsx/i);
-    expect(codeBlock).toBeInTheDocument();
-  });
+  // it('renders the code block with the correct file path', () => {
+  //   const codeBlock = screen.getByText(/src\/app\/page\.tsx/i);
+  //   expect(codeBlock).toBeInTheDocument();
+  // });
 });

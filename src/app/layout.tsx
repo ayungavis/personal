@@ -4,26 +4,28 @@ import type { Metadata, Viewport } from 'next';
 import { ThemeProvider } from 'next-themes';
 import type { CSSProperties, ReactNode } from 'react';
 
+import { MainLayout } from '@/components/layout/main-layout';
+import { APP_CONSTANT } from '@/constants/app-constant';
 import { inter } from '@/fonts';
 
 export const viewport: Viewport = {
-  themeColor: '#000000',
+  themeColor: APP_CONSTANT.THEME_COLOR,
 };
 
 export const metadata: Metadata = {
-  title: 'Your App Name',
-  description: 'Your app description',
-  metadataBase: new URL('https://google.com'),
+  title: APP_CONSTANT.TITLE,
+  description: APP_CONSTANT.DESCRIPTION,
+  metadataBase: new URL(APP_CONSTANT.URL),
   openGraph: {
-    title: 'Your App Name',
-    description: 'Your app description',
-    url: 'https://google.com',
-    siteName: 'Your App Name',
+    title: APP_CONSTANT.TITLE,
+    description: APP_CONSTANT.DESCRIPTION,
+    url: APP_CONSTANT.URL,
+    siteName: APP_CONSTANT.TITLE,
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@username',
-    creator: '@username',
+    site: APP_CONSTANT.TWITTER_USERNAME,
+    creator: APP_CONSTANT.TWITTER_USERNAME,
   },
 };
 
@@ -43,7 +45,10 @@ const RootLayout = ({
       }
     >
       <body>
-        <ThemeProvider>{children}</ThemeProvider>
+        {/* // TODO: Implement dark theme later */}
+        <ThemeProvider forcedTheme="light">
+          <MainLayout>{children}</MainLayout>
+        </ThemeProvider>
       </body>
     </html>
   );
